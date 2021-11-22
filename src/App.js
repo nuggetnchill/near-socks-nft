@@ -59,11 +59,11 @@ export default function App() {
         </button>
       </div>
       <main>
-          <h1>
+          <h1 className="gradient-text">
            NEAR SOCKS NFT 
-           <br/> <span style={{"font-size":"20px"}}>Reimagine your socks</span>
+           <br/> <span style={{fontSize:"20px"}}>Reimagine your socks</span>
           </h1>
-    <img src="./asset/near-sock-with background.gif"/>
+    <img src="https://raw.githubusercontent.com/nuggetnchill/near-socks-nft/main/asset/near-sock-with%20background.gif"/>
 
         <form
           onSubmit={async (event) => {
@@ -77,7 +77,7 @@ export default function App() {
                   token_id: window.accountId,
                   metadata: {
                     title: "NEAR SOCKS",
-                    media: "https://media2.giphy.com/media/A7WYEfDF6Li8O49gEP/giphy.gif?cid=ecf05e47ljrflo4r8wdket29ae9ho3czecitt1x8ykvhiuow&rid=giphy.gif&ct=g"
+                    media: "https://raw.githubusercontent.com/nuggetnchill/near-socks-nft/main/asset/near-sock-with%20background.gif"
                   }
                 },
                   BOATLOAD_OF_GAS,
@@ -110,23 +110,38 @@ export default function App() {
                 display: 'block',
                 color: 'var(--gray)',
                 marginBottom: '0.5em',
+                textAlign: 'center'
               }}
             >
-              0.01 N to mint
+              0.01 Ⓝ to mint 🧦 | 1 NFT per Wallet |
+              <br/>
+               NFT will be burned when redeemed for real socks
             </label>
-            <div style={{ display: 'flex' }}>
-              <button
+              <center>
+              <button 
+                className="mint-btn"
                 disabled={false}
                 style={{ borderRadius: '5px' }}
               >
                 MINT NOW
               </button>
-            </div>
+            <label
+              htmlFor="greeting"
+              style={{
+                display: 'block',
+                color: 'var(--gray)',
+                margin: '0.5em 0',
+                textAlign: 'center'
+              }}
+            >
+              Please check your <a target="_blank" href="https://wallet.testnet.near.org/?tab=collectibles">Wallet</a> after mint for 🧦
+            </label>
+              </center>
           </fieldset>
         </form>
 
         <hr />
-        <p style={{"font-size":"10px"}}>Brought to you by @nuggetnchill</p>
+        <p style={{fontSize:"10px"}}>Brought to you by @nuggetnchill</p>
       </main>
       {showNotification && <Notification />}
     </>

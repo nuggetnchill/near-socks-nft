@@ -1,4 +1,4 @@
-const CONTRACT_NAME = "dev-1637611592735-96841015583716";
+const CONTRACT_NAME = "near-socks.testnet";
 
 function getConfig(env) {
   switch (env) {
@@ -18,7 +18,7 @@ function getConfig(env) {
     return {
       networkId: 'testnet',
       nodeUrl: 'https://rpc.testnet.near.org',
-      contractName: 'dev-1637611592735-96841015583716',
+      contractName: 'near-socks.testnet',
       walletUrl: 'https://wallet.testnet.near.org',
       helperUrl: 'https://helper.testnet.near.org',
       explorerUrl: 'https://explorer.testnet.near.org',

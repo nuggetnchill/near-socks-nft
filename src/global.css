@@ -164,6 +164,22 @@ aside footer *:first-child {
 aside footer *:last-child {
   color: var(--gray);
 }
+
+.mint-btn{
+  margin: 1rem 0;
+  padding: 1rem 3rem;
+  background: -webkit-linear-gradient(left, #712196, #dd3434);
+  background-size: 200% 200%;
+  animation: gradient-animation 4s ease infinite;
+}
+
+.gradient-text {
+  background: -webkit-linear-gradient(left, #712196 30%, #dd3434 60%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @keyframes notify {
   0% { transform: translateY(10em) }
   5% { transform: translateY(0) }
@@ -178,9 +194,6 @@ aside footer *:last-child {
     --gray: #aaa;
     --shadow: #2a2a2a;
     --light-gray: #444;
-  }
-  h1 {
-    background-image: url(assets/logo-white.svg);
   }
   input:focus {
     box-shadow: 0 0 10em rgba(255, 255, 255, 0.02) inset;
